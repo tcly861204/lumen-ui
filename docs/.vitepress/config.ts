@@ -11,6 +11,7 @@ const componentsEntry = fileURLToPath(
 ).replace(/\\/g, '/')
 
 export default defineConfig({
+  base: '/lumen-ui',
   lang: 'zh-CN',
   title: 'Lumen UI',
   description: '基于 Vue 3 的轻量级组件库文档站',
@@ -89,6 +90,6 @@ export default defineConfig({
       fs: {
         allow: [monorepoRoot],
       },
-    },
+    }
   },
 })
