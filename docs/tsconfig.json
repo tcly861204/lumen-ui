@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@lumen/components": ["../packages/components/src/index.ts"],
+      "@lumen/tokens": ["../packages/tokens/src/index.ts"]
+    },
+    "types": ["node"]
+  },
+  "include": ["src/**/*", ".storybook/**/*", "../packages/components/src/vue-shim.d.ts"],
+  "exclude": ["node_modules", "storybook-static"]
+}

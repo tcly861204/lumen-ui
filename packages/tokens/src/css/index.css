@@ -1,0 +1,6 @@
+/* Lumen UI Tokens - CSS 入口
+ * 在用户项目入口处 import 一次：
+ * import '@lumen/tokens/css/variables.css';
+ */
+
+@import './variables.css';

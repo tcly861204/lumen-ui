@@ -1,0 +1,92 @@
+// =====================================================================
+// Lumen UI - SCSS Mixin
+// =====================================================================
+
+// mixin 函数体在 Sass 里是在「定义处」求值，而不是在「调用处」。
+// transition() 内部用到 variables 里的过渡时长/缓动变量，
+// 所以这里必须先把 variables @use 进来，否则组件侧无论怎么注入都解析不到。
+@use 'sass:list';
+@use './variables' as *;
+
+// BEM 命名辅助：生成 .l-block__element--modifier
+@mixin b($block) {
+  $B: $block !global;
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  $E: $element !global;
+  $selector: &;
+  $currentSelector: '';
+  @each $unit in $selector {
+    $currentSelector: #{$currentSelector + $unit};
+    @if (str-index($currentSelector, '#{$B}') != null) {
+      @if (str-index($currentSelector, '__') == null) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin m($modifier) {
+  $selector: &;
+  $currentSelector: '';
+  @each $unit in $selector {
+    $currentSelector: #{$currentSelector + $unit};
+    @if (str-index($currentSelector, '#{$B}') != null) {
+      @content;
+    }
+  }
+}
+
+// 单行文本省略
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 多行文本省略
+@mixin text-ellipsis-multiline($line) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+// 清除浮动
+@mixin clearfix {
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
+
+// 不可选中
+@mixin unselectable {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+// 块级元素
+@mixin block($display: block) {
+  display: $display;
+}
+
+// 通用过渡
+@mixin transition($props...) {
+  $result: ();
+  @each $prop in $props {
+    $result: list.append(
+      $result,
+      $prop $l-transition-duration-base $l-transition-function-ease-in-out-bezier,
+      comma
+    );
+  }
+  transition: $result;
+}

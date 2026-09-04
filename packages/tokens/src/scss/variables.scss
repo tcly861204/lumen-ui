@@ -1,0 +1,97 @@
+// =====================================================================
+// Lumen UI - SCSS 设计变量（编译期）
+// 命名规范：$l-<分类>-<语义>，如 $l-color-primary、$l-spacing-md
+// =====================================================================
+
+// ---------- 主题色 ----------
+$l-color-primary: #409eff;
+$l-color-primary-light-3: #79bbff;
+$l-color-primary-light-5: #a0cfff;
+$l-color-primary-light-7: #c6e2ff;
+$l-color-primary-light-8: #d9ecff;
+$l-color-primary-light-9: #ecf5ff;
+$l-color-primary-dark-2: #337ecc;
+
+// ---------- 中性色 ----------
+$l-color-white: #ffffff;
+$l-color-black: #000000;
+$l-color-text-primary: #303133;
+$l-color-text-regular: #606266;
+$l-color-text-secondary: #909399;
+$l-color-text-placeholder: #a8abb2;
+$l-color-text-disabled: #c0c4cc;
+
+// ---------- 边框色 ----------
+$l-border-color-base: #dcdfe6;
+$l-border-color-light: #e4e7ed;
+$l-border-color-lighter: #ebeef5;
+$l-border-color-extra-light: #f2f6fc;
+$l-border-color-dark: #d4d7dc;
+$l-border-color-darker: #cdd0d6;
+
+// ---------- 背景色 ----------
+$l-bg-color: #ffffff;
+$l-bg-color-page: #f2f3f5;
+$l-bg-color-overlay: #ffffff;
+
+// ---------- 状态色 ----------
+$l-color-success: #67c23a;
+$l-color-success-light-9: #f0f9eb;
+$l-color-warning: #e6a23c;
+$l-color-warning-light-9: #fdf6ec;
+$l-color-danger: #f56c6c;
+$l-color-danger-light-9: #fef0f0;
+$l-color-info: #909399;
+$l-color-info-light-9: #f4f4f5;
+
+// ---------- 字号 ----------
+$l-font-size-extra-large: 20px;
+$l-font-size-large: 18px;
+$l-font-size-medium: 16px;
+$l-font-size-base: 14px;
+$l-font-size-small: 13px;
+$l-font-size-extra-small: 12px;
+
+// ---------- 字重 ----------
+$l-font-weight-primary: 500;
+$l-font-weight-secondary: 400;
+
+// ---------- 行高 ----------
+$l-line-height-primary: 24px;
+$l-line-height-medium: 20px;
+$l-line-height-base: 1.5;
+
+// ---------- 圆角 ----------
+$l-border-radius-base: 4px;
+$l-border-radius-small: 2px;
+$l-border-radius-round: 20px;
+$l-border-radius-circle: 100%;
+
+// ---------- 间距 ----------
+$l-spacing-xs: 4px;
+$l-spacing-sm: 8px;
+$l-spacing-md: 12px;
+$l-spacing-lg: 16px;
+$l-spacing-xl: 20px;
+$l-spacing-xxl: 24px;
+
+// ---------- 阴影 ----------
+$l-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+$l-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+$l-shadow-dark: 0 4px 16px rgba(0, 0, 0, 0.16);
+$l-shadow-focus: 0 0 0 2px rgba(64, 158, 255, 0.2);
+
+// ---------- 过渡 ----------
+$l-transition-duration-fast: 0.2s;
+$l-transition-duration-base: 0.3s;
+$l-transition-duration-slow: 0.4s;
+$l-transition-function-ease-in-out-bezier: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// ---------- 层级 ----------
+$l-index-normal: 1;
+$l-index-top: 1000;
+$l-index-popper: 2000;
+
+// ---------- 边框宽度 ----------
+$l-border-width-base: 1px;
+$l-border-width-thin: 0.5px;

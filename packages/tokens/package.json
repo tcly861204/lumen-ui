@@ -1,0 +1,27 @@
+{
+  "name": "@lumen/tokens",
+  "version": "0.0.0",
+  "description": "Lumen UI 设计 Token（SCSS 变量 + CSS 变量）",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./scss/*": "./src/scss/*",
+    "./css/*": "./src/css/*"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "echo 'tokens 是源码包，无需构建' && exit 0",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'tokens 暂未配置 lint' && exit 0",
+    "lint:fix": "echo 'tokens 暂未配置 lint:fix' && exit 0",
+    "test": "echo 'no tests' && exit 0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}

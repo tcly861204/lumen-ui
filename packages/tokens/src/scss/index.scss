@@ -1,0 +1,8 @@
+// Lumen UI Tokens - SCSS 入口
+// 在组件库源码里通过 @use 引入：
+
+// @use '@lumen/tokens/scss/variables' as *;
+// @use '@lumen/tokens/scss/mixins' as *;
+
+@forward './variables';
+@forward './mixins';

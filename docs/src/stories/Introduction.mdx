@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Introduction" />
+
+# Lumen UI
+
+基于 **Vue 3 + TypeScript** 的轻量级组件库。
+
+## 特性
+
+- 🎨 **设计 Token 体系**：SCSS 变量 + CSS 变量双向桥接
+- ⚡ **Vite 驱动**：基于 Vite library mode 构建，HMR 极速
+- 🧩 **按需引入**：支持 ES Module 按需加载与 Tree Shaking
+- 📦 **Monorepo 架构**：`tokens` 与 `components` 解耦
+- 📖 **Storybook 文档**：所有组件都有可视化 demo 与 API 文档
+
+## 快速开始
+
+```bash
+# 安装
+pnpm add @lumen/components
+
+# 完整引入
+import { createApp } from 'vue'
+import LumenUI from '@lumen/components'
+import '@lumen/components/dist/style.css'
+import '@lumen/tokens/css/variables.css'
+
+app.use(LumenUI)
+```
+
+```bash
+# 按需引入
+import { LButton } from '@lumen/components'
+import '@lumen/components/dist/style.css'
+```
+
+## 组件列表
+
+| 组件 | 状态 | 说明 |
+|------|------|------|
+| Button | ✅ | 基础按钮 |
+| ... |  |  |
+
+## 目录
+
+- 组件源码：`packages/components/src/components/*`
+- 设计 Token：`packages/tokens/src/`
+- 文档：`docs/src/stories/*`
