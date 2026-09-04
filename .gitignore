@@ -28,6 +28,7 @@ yarn-error.log*
 *.swo
 .DS_Store
 Thumbs.db
+.tmp
 
 # 环境变量
 .env
