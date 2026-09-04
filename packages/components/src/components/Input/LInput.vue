@@ -142,9 +142,16 @@ const handleClear = () => {
 .l-input {
   --l-input-height: 34px;
   --l-input-padding-x: 11px;
-  --l-input-font-size: #{$l-font-size-base};
-  --l-input-border-color: #{$l-border-color-base};
-  --l-input-shadow-color: #{rgba($l-color-primary, 0.16)};
+  --l-input-font-size: var(--l-font-size-base);
+  --l-input-text-color: var(--l-color-text-primary);
+  --l-input-bg-color: var(--l-bg-color-overlay);
+  --l-input-border-color: var(--l-border-color-base);
+  --l-input-hover-border-color: var(--l-border-color-dark);
+  --l-input-focus-border-color: var(--l-color-primary);
+  --l-input-shadow-color: var(--l-shadow-color-primary-focus);
+  --l-input-placeholder-color: var(--l-color-text-placeholder);
+  --l-input-icon-color: var(--l-color-text-secondary);
+  --l-input-icon-hover-color: var(--l-color-text-regular);
   display: inline-flex;
   align-items: center;
   width: 100%;
@@ -152,30 +159,29 @@ const handleClear = () => {
   height: var(--l-input-height);
   padding: 0 var(--l-input-padding-x);
   gap: $l-spacing-sm;
-  color: $l-color-text-primary;
-  background: $l-color-white;
+  color: var(--l-input-text-color);
+  background: var(--l-input-bg-color);
   border: 1px solid var(--l-input-border-color);
   border-radius: 8px;
   box-sizing: border-box;
   @include transition(border-color, box-shadow, background-color);
 
   &:hover {
-    --l-input-border-color: #{$l-border-color-dark};
+    border-color: var(--l-input-hover-border-color);
   }
 
   &.is-focus {
-    --l-input-border-color: #{$l-color-primary};
+    border-color: var(--l-input-focus-border-color);
     box-shadow: 0 0 0 2px var(--l-input-shadow-color);
   }
 
   &.is-disabled {
-    color: $l-color-text-disabled;
-    background: $l-bg-color-page;
+    --l-input-text-color: var(--l-color-text-disabled);
+    --l-input-bg-color: var(--l-bg-color-page);
     cursor: not-allowed;
 
     .l-input__inner {
       cursor: not-allowed;
-      color: $l-color-text-disabled;
     }
   }
 
@@ -186,37 +192,43 @@ const handleClear = () => {
 
     &:hover,
     &.is-focus {
-      --l-input-border-color: transparent;
+      border-color: transparent;
       box-shadow: none;
     }
   }
 
   &--success {
-    --l-input-border-color: #{color.mix($l-color-success, $l-color-white, 55%)};
-    --l-input-shadow-color: #{rgba($l-color-success, 0.16)};
+    --l-input-border-color: var(--l-color-success-light-3);
+    --l-input-hover-border-color: var(--l-color-success);
+    --l-input-focus-border-color: var(--l-color-success);
+    --l-input-shadow-color: var(--l-shadow-color-success-focus);
   }
 
   &--warning {
-    --l-input-border-color: #{color.mix($l-color-warning, $l-color-white, 55%)};
-    --l-input-shadow-color: #{rgba($l-color-warning, 0.16)};
+    --l-input-border-color: var(--l-color-warning-light-3);
+    --l-input-hover-border-color: var(--l-color-warning);
+    --l-input-focus-border-color: var(--l-color-warning);
+    --l-input-shadow-color: var(--l-shadow-color-warning-focus);
   }
 
   &--error {
-    --l-input-border-color: #{color.mix($l-color-danger, $l-color-white, 55%)};
-    --l-input-shadow-color: #{rgba($l-color-danger, 0.16)};
+    --l-input-border-color: var(--l-color-danger-light-3);
+    --l-input-hover-border-color: var(--l-color-danger);
+    --l-input-focus-border-color: var(--l-color-danger);
+    --l-input-shadow-color: var(--l-shadow-color-danger-focus);
   }
 
   &--large {
     --l-input-height: 40px;
     --l-input-padding-x: 13px;
-    --l-input-font-size: #{$l-font-size-medium};
+    --l-input-font-size: var(--l-font-size-medium);
     border-radius: 10px;
   }
 
   &--small {
     --l-input-height: 30px;
     --l-input-padding-x: 9px;
-    --l-input-font-size: #{$l-font-size-extra-small};
+    --l-input-font-size: var(--l-font-size-extra-small);
     border-radius: 7px;
   }
 }
@@ -235,7 +247,7 @@ const handleClear = () => {
   outline: none;
 
   &::placeholder {
-    color: $l-color-text-placeholder;
+    color: var(--l-input-placeholder-color);
   }
 }
 
@@ -245,7 +257,7 @@ const handleClear = () => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: $l-color-text-secondary;
+  color: var(--l-input-icon-color);
   flex-shrink: 0;
 }
 
@@ -257,7 +269,7 @@ const handleClear = () => {
   @include transition(color);
 
   &:hover {
-    color: $l-color-text-regular;
+    color: var(--l-input-icon-hover-color);
   }
 }
 </style>

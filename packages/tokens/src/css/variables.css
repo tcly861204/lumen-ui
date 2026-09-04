@@ -24,6 +24,7 @@
 
   /* 边框色 */
   --l-border-color-base: #dcdfe6;
+  --l-border-color-dark: #d4d7dc;
   --l-border-color-light: #e4e7ed;
   --l-border-color-lighter: #ebeef5;
   --l-border-color-extra-light: #f2f6fc;
@@ -35,13 +36,33 @@
 
   /* 状态色 */
   --l-color-success: #67c23a;
+  --l-color-success-light-3: #95d475;
   --l-color-success-light-9: #f0f9eb;
+  --l-color-success-dark-2: #529b2e;
   --l-color-warning: #e6a23c;
+  --l-color-warning-light-3: #eebe77;
   --l-color-warning-light-9: #fdf6ec;
+  --l-color-warning-dark-2: #b88230;
   --l-color-danger: #f56c6c;
+  --l-color-danger-light-3: #f89898;
   --l-color-danger-light-9: #fef0f0;
+  --l-color-danger-dark-2: #c45656;
   --l-color-info: #909399;
+  --l-color-info-light-3: #b1b3b8;
   --l-color-info-light-9: #f4f4f5;
+  --l-color-info-dark-2: #73767a;
+
+  /* 交互态阴影色 */
+  --l-shadow-color-primary-focus: rgba(64, 158, 255, 0.16);
+  --l-shadow-color-primary-focus-strong: rgba(64, 158, 255, 0.24);
+  --l-shadow-color-success-focus: rgba(103, 194, 58, 0.16);
+  --l-shadow-color-warning-focus: rgba(230, 162, 60, 0.16);
+  --l-shadow-color-danger-focus: rgba(245, 108, 108, 0.16);
+  --l-shadow-color-info-focus: rgba(144, 147, 153, 0.16);
+
+  /* 组件阴影 */
+  --l-shadow-button-base: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --l-shadow-button-primary: 0 1px 2px rgba(64, 158, 255, 0.2);
 
   /* 字号 */
   --l-font-size-extra-large: 20px;
@@ -65,4 +86,64 @@
   --l-transition-duration-fast: 0.2s;
   --l-transition-duration-base: 0.3s;
   --l-transition-function-ease-in-out-bezier: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+html[data-theme='dark'] {
+  /* 主题色 */
+  --l-color-primary: #5aa9ff;
+  --l-color-primary-light-3: #82c0ff;
+  --l-color-primary-light-5: #a8d5ff;
+  --l-color-primary-light-7: #29405a;
+  --l-color-primary-light-8: #22354a;
+  --l-color-primary-light-9: #1b2a38;
+  --l-color-primary-dark-2: #3f8fe6;
+
+  /* 中性色 */
+  --l-color-text-primary: #e5eaf3;
+  --l-color-text-regular: #cfd6e4;
+  --l-color-text-secondary: #a6afc1;
+  --l-color-text-placeholder: #7e8798;
+  --l-color-text-disabled: #6b7280;
+
+  /* 边框色 */
+  --l-border-color-base: #4a5568;
+  --l-border-color-dark: #616d80;
+  --l-border-color-light: #3f4755;
+  --l-border-color-lighter: #353d4a;
+  --l-border-color-extra-light: #2b313c;
+
+  /* 背景色 */
+  --l-bg-color: #141821;
+  --l-bg-color-page: #0f1115;
+  --l-bg-color-overlay: #1a1f28;
+
+  /* 状态色 */
+  --l-color-success: #7ccf59;
+  --l-color-success-light-3: #98da7d;
+  --l-color-success-light-9: #1d2d1b;
+  --l-color-success-dark-2: #60a142;
+  --l-color-warning: #e8b04d;
+  --l-color-warning-light-3: #efc170;
+  --l-color-warning-light-9: #332817;
+  --l-color-warning-dark-2: #b8893c;
+  --l-color-danger: #f07d7d;
+  --l-color-danger-light-3: #f39a9a;
+  --l-color-danger-light-9: #331d1f;
+  --l-color-danger-dark-2: #c76464;
+  --l-color-info: #a0a4aa;
+  --l-color-info-light-3: #b6b9be;
+  --l-color-info-light-9: #23262b;
+  --l-color-info-dark-2: #7d8187;
+
+  /* 交互态阴影色 */
+  --l-shadow-color-primary-focus: rgba(90, 169, 255, 0.2);
+  --l-shadow-color-primary-focus-strong: rgba(90, 169, 255, 0.28);
+  --l-shadow-color-success-focus: rgba(124, 207, 89, 0.18);
+  --l-shadow-color-warning-focus: rgba(232, 176, 77, 0.18);
+  --l-shadow-color-danger-focus: rgba(240, 125, 125, 0.18);
+  --l-shadow-color-info-focus: rgba(160, 164, 170, 0.18);
+
+  /* 组件阴影 */
+  --l-shadow-button-base: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --l-shadow-button-primary: 0 1px 2px rgba(90, 169, 255, 0.28);
 }
