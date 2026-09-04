@@ -88,6 +88,7 @@
   --l-transition-function-ease-in-out-bezier: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+html.dark,
 html[data-theme='dark'] {
   /* 主题色 */
   --l-color-primary: #5aa9ff;
