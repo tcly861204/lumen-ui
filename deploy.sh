@@ -1,3 +1,4 @@
+pnpm build:docs
 cd ./dist
 git init
 git add .
@@ -6,3 +7,5 @@ git remote add origin https://github.com/tcly861204/lumen-ui.git
 git branch gh-pages
 git checkout gh-pages
 git push origin gh-pages -f
+cd ..
+rm -rf dist

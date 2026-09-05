@@ -14,7 +14,7 @@
     "build": "pnpm -r --filter \"./packages/*\" build",
     "build:tokens": "pnpm --filter @lumen/tokens build",
     "build:components": "pnpm --filter @lumen/components build",
-    "build:doc": "pnpm --filter @lumen/docs build",
+    "build:docs": "pnpm --filter @lumen/docs build",
     "test": "pnpm -r test",
     "lint": "eslint \"packages/**/*.{ts,vue}\" \"docs/src/**/*.{ts,vue}\"",
     "lint:fix": "pnpm lint -- --fix",
@@ -25,7 +25,8 @@
     "clean": "pnpm -r exec rm -rf dist node_modules .turbo",
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "deploy": "bash ./deploy.sh"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.10",
