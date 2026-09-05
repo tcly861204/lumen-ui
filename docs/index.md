@@ -7,7 +7,7 @@ hero:
   tagline: "面向业务后台场景，延续 Element 风格，同时保持更紧凑的视觉密度。"
   image:
     src: /logo.svg
-    alt: Lumen UI
+    alt: Lumen UI 组件库
   actions:
     - theme: brand
       text: 开始使用

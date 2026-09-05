@@ -26,6 +26,9 @@ export default defineConfig({
       { text: '指南', link: '/guide/getting-started' },
       { text: '组件', link: '/components/button' },
     ],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/tcly861204/lumen-ui' }
+    ],
     search: {
       provider: 'local',
     },
