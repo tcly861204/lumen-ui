@@ -1,0 +1,23 @@
+import{d as g,N as p,o as s,c as i,L as _,M as T,e as b,y as r,x as o,v as L,k as h,_ as u,i as t,a as l,a3 as x}from"./chunks/framework.CAcRtpXh.js";const v={class:"lumen-demo-row"},P=g({__name:"TagClosableDemo",setup(m){const e=h([{type:"primary",label:"Vue 3"},{type:"success",label:"TypeScript"},{type:"info",label:"VitePress"}]),a=c=>{e.value.splice(c,1)};return(c,f)=>{const d=p("LTag");return s(),i("div",v,[(s(!0),i(_,null,T(e.value,(n,y)=>(s(),b(d,{key:n.label,type:n.type,closable:"",round:"",onClose:B=>a(y)},{default:r(()=>[o(L(n.label),1)]),_:2},1032,["type","onClose"]))),128))])}}}),k={},D={class:"lumen-demo-row"};function S(m,e){const a=p("LTag");return s(),i("div",D,[t(a,{size:"large",type:"primary"},{default:r(()=>[...e[0]||(e[0]=[o("Large",-1)])]),_:1}),t(a,{type:"primary"},{default:r(()=>[...e[1]||(e[1]=[o("Default",-1)])]),_:1}),t(a,{size:"small",type:"primary"},{default:r(()=>[...e[2]||(e[2]=[o("Small",-1)])]),_:1})])}const C=u(k,[["render",S]]),V={},w={class:"lumen-demo-row"};function z(m,e){const a=p("LTag");return s(),i("div",w,[t(a,null,{default:r(()=>[...e[0]||(e[0]=[o("Default",-1)])]),_:1}),t(a,{type:"primary"},{default:r(()=>[...e[1]||(e[1]=[o("Primary",-1)])]),_:1}),t(a,{type:"success"},{default:r(()=>[...e[2]||(e[2]=[o("Success",-1)])]),_:1}),t(a,{type:"warning"},{default:r(()=>[...e[3]||(e[3]=[o("Warning",-1)])]),_:1}),t(a,{type:"danger"},{default:r(()=>[...e[4]||(e[4]=[o("Danger",-1)])]),_:1}),t(a,{type:"info"},{default:r(()=>[...e[5]||(e[5]=[o("Info",-1)])]),_:1})])}const N=u(V,[["render",z]]),A=JSON.parse('{"title":"Tag 标签","description":"","frontmatter":{},"headers":[],"relativePath":"components/tag/index.md","filePath":"components/tag/index.md","lastUpdated":1788512108000}'),$={name:"components/tag/index.md"},E=g({...$,setup(m){const e=`<template>
+  <LTag>Default</LTag>
+  <LTag type="primary">Primary</LTag>
+  <LTag type="success">Success</LTag>
+  <LTag type="warning">Warning</LTag>
+  <LTag type="danger">Danger</LTag>
+  <LTag type="info">Info</LTag>
+</template>`,a=`<template>
+  <LTag size="large" type="primary">Large</LTag>
+  <LTag type="primary">Default</LTag>
+  <LTag size="small" type="primary">Small</LTag>
+</template>`,c=`<template>
+  <LTag
+    v-for="(tag, index) in tags"
+    :key="tag.label"
+    :type="tag.type"
+    closable
+    round
+    @close="removeTag(index)"
+  >
+    {{ tag.label }}
+  </LTag>
+</template>`;return(f,d)=>{const n=p("DemoBlock");return s(),i("div",null,[d[0]||(d[0]=l("h1",{id:"tag-标签",tabindex:"-1"},[o("Tag 标签 "),l("a",{class:"header-anchor",href:"#tag-标签","aria-label":'Permalink to "Tag 标签"'},"​")],-1)),d[1]||(d[1]=l("p",null,"用于展示轻量状态、属性信息或可关闭的分类项，适合筛选器、状态提示和列表标签。",-1)),d[2]||(d[2]=l("h2",{id:"类型",tabindex:"-1"},[o("类型 "),l("a",{class:"header-anchor",href:"#类型","aria-label":'Permalink to "类型"'},"​")],-1)),t(n,{title:"标签类型",description:"支持默认、主色、成功、警告、危险和信息态。",code:e},{default:r(()=>[t(N)]),_:1}),d[3]||(d[3]=l("h2",{id:"尺寸",tabindex:"-1"},[o("尺寸 "),l("a",{class:"header-anchor",href:"#尺寸","aria-label":'Permalink to "尺寸"'},"​")],-1)),t(n,{title:"标签尺寸",description:"默认尺寸偏紧凑，适合后台场景密集展示。",code:a},{default:r(()=>[t(C)]),_:1}),d[4]||(d[4]=l("h2",{id:"可关闭",tabindex:"-1"},[o("可关闭 "),l("a",{class:"header-anchor",href:"#可关闭","aria-label":'Permalink to "可关闭"'},"​")],-1)),t(n,{title:"可关闭标签",description:"结合 closable 和 close 事件可以方便地做动态标签组。",code:c},{default:r(()=>[t(P)]),_:1}),d[5]||(d[5]=x("",4))])}}});export{A as __pageData,E as default};
