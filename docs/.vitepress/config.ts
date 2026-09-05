@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vitepress'
-
+import { resolve } from 'node:path'
 const monorepoRoot = fileURLToPath(new URL('../../', import.meta.url))
 const componentsSrc = fileURLToPath(new URL('../../packages/components/src', import.meta.url)).replace(
   /\\/g,
@@ -11,7 +11,8 @@ const componentsEntry = fileURLToPath(
 ).replace(/\\/g, '/')
 
 export default defineConfig({
-  base: '/lumen-ui',
+  base: process.env.NODE_ENV === 'development' ? '' : '/lumen-ui',
+  outDir: resolve(process.cwd(), '..', 'dist'),
   lang: 'zh-CN',
   title: 'Lumen UI',
   description: '基于 Vue 3 的轻量级组件库文档站',
