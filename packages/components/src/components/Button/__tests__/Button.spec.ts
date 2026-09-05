@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
 import { mount } from '@vue/test-utils'
-import Button from '../Button.vue'
+import LButton from '../Button.vue'
 
 describe('LButton', () => {
   afterEach(() => {
@@ -9,14 +9,14 @@ describe('LButton', () => {
   })
 
   it('renders default slot content', () => {
-    const wrapper = mount(Button, {
+    const wrapper = mount(LButton, {
       slots: { default: 'Click me' },
     })
     expect(wrapper.text()).toContain('Click me')
   })
 
   it('emits click event when clicked', async () => {
-    const wrapper = mount(Button, {
+    const wrapper = mount(LButton, {
       slots: { default: 'Click' },
     })
     await wrapper.trigger('click')
@@ -24,7 +24,7 @@ describe('LButton', () => {
   })
 
   it('does not emit click when disabled', async () => {
-    const wrapper = mount(Button, {
+    const wrapper = mount(LButton, {
       props: { disabled: true },
       slots: { default: 'Disabled' },
     })
@@ -33,7 +33,7 @@ describe('LButton', () => {
   })
 
   it('applies type class', () => {
-    const wrapper = mount(Button, {
+    const wrapper = mount(LButton, {
       props: { type: 'primary' },
       slots: { default: 'Primary' },
     })
@@ -41,7 +41,7 @@ describe('LButton', () => {
   })
 
   it('applies size class', () => {
-    const wrapper = mount(Button, {
+    const wrapper = mount(LButton, {
       props: { size: 'small' },
       slots: { default: 'Small' },
     })
@@ -49,7 +49,7 @@ describe('LButton', () => {
   })
 
   it('shows loading state', () => {
-    const wrapper = mount(Button, {
+    const wrapper = mount(LButton, {
       props: { loading: true },
       slots: { default: 'Loading' },
     })
@@ -57,7 +57,7 @@ describe('LButton', () => {
   })
 
   it('renders icon slot when not loading', () => {
-    const wrapper = mount(Button, {
+    const wrapper = mount(LButton, {
       slots: {
         icon: '<svg class="test-icon" />',
         default: 'With icon',
@@ -69,7 +69,7 @@ describe('LButton', () => {
   })
 
   it('shows loading spinner and hides icon slot when loading', () => {
-    const wrapper = mount(Button, {
+    const wrapper = mount(LButton, {
       props: { loading: true },
       slots: {
         icon: '<svg class="test-icon" />',
@@ -84,7 +84,7 @@ describe('LButton', () => {
   })
 
   it('applies plain round and circle classes', () => {
-    const wrapper = mount(Button, {
+    const wrapper = mount(LButton, {
       props: {
         plain: true,
         round: true,
@@ -101,7 +101,7 @@ describe('LButton', () => {
   })
 
   it('sets native button type attribute', () => {
-    const wrapper = mount(Button, {
+    const wrapper = mount(LButton, {
       props: { nativeType: 'submit' },
       slots: { default: 'Submit' },
     })
@@ -110,7 +110,7 @@ describe('LButton', () => {
   })
 
   it('throttles repeated clicks within throttle duration', async () => {
-    const wrapper = mount(Button, {
+    const wrapper = mount(LButton, {
       props: { throttleDuration: 30 },
       slots: { default: 'Throttle' },
     })

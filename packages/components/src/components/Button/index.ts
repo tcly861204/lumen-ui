@@ -1,7 +1,5 @@
-import Button from './Button.vue'
+import LButton from './Button.vue'
 import type { ButtonProps, ButtonEmits } from './types'
-
-export { Button }
-export { Button as LButton }
+export { LButton }
 export type { ButtonProps, ButtonEmits }
-export default Button
+export default LButton

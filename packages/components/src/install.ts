@@ -3,14 +3,14 @@
  * 使用：app.use(LumenUI)
  */
 import type { App, Component, Plugin } from 'vue'
-import { Button } from './components/Button'
+import { LButton } from './components/Button'
 import { LIcon } from './components/Icon'
 import { LInput } from './components/Input'
 import { LTag } from './components/Tag'
 import { LForm } from './components/Form'
 import { LFormItem } from './components/FormItem'
 
-const components: Component[] = [Button, LIcon, LInput, LTag, LForm, LFormItem]
+const components: Component[] = [LButton, LIcon, LInput, LTag, LForm, LFormItem]
 
 const install = (app: App): void => {
   components.forEach((comp) => {

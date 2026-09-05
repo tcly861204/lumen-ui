@@ -7,14 +7,14 @@
  *   import '@lumen/components/dist/style.css'
  */
 
-import { Button, LButton } from './components/Button'
+import { LButton } from './components/Button'
 import { LIcon } from './components/Icon'
 import { LInput } from './components/Input'
 import { LTag } from './components/Tag'
 import { LForm } from './components/Form'
 import { LFormItem } from './components/FormItem'
 
-export { Button, LButton }
+export { LButton }
 export { LIcon }
 export { LInput }
 export { LTag }
